@@ -1,0 +1,93 @@
+@media screen and (min-width: 1367px) and (max-width: 2500px) {
+  .container {
+    max-width: 1500px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .project .container {
+    margin-top: 50px; }
+  .hamburger {
+    display: block;
+    margin-left: auto; }
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 99; }
+  .mobile {
+    position: fixed;
+    left: -100%;
+    right: auto;
+    top: 45px;
+    background: #FE5826;
+    height: 100%;
+    z-index: 99;
+    width: 100%;
+    transition: left 0.5s ease-in-out; }
+    .mobile .navbar-nav .nav-item.active .nav-link {
+      color: #000 !important; }
+    .mobile .navbar-nav .nav-item .nav-link:hover {
+      color: #000 !important; }
+    .mobile.open {
+      left: 0;
+      right: auto;
+      width: 100%; }
+  .main-profile .profile {
+    margin-top: 50px; }
+  .m .btns .btn-theme {
+    padding: 12px 20px; } }
+
+@media screen and (max-width: 767px) {
+  .project .container {
+    margin-top: 50px; }
+  .hamburger {
+    display: block; }
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 99; }
+  .container {
+    max-width: 100%;
+    width: 100%; }
+  .mobile {
+    position: fixed;
+    left: -100%;
+    right: auto;
+    top: 45px;
+    background: #FE5826;
+    height: 100%;
+    z-index: 99;
+    width: 100%;
+    transition: left 0.5s ease-in-out; }
+    .mobile .navbar-nav .nav-item.active .nav-link {
+      color: #000 !important; }
+    .mobile .navbar-nav .nav-item .nav-link:hover {
+      color: #000 !important; }
+    .mobile.open {
+      left: 0;
+      right: auto;
+      width: 100%; }
+  .main-profile .profile {
+    margin-top: 50px;
+    height: auto; }
+    .main-profile .profile p {
+      font-size: 27px; }
+    .main-profile .profile img {
+      position: relative;
+      top: 10px;
+      left: 0; }
+  .main-profile .right {
+    width: 100%;
+    margin-top: 40px; }
+  .m h5 {
+    margin-bottom: 20px;
+    font-size: 40px; }
+  .m p {
+    font-size: 18px;
+    opacity: 1;
+    line-height: 30px; }
+  .m .btns .btn-theme {
+    padding: 12px 20px; }
+  .m ul li {
+    margin-bottom: 10px;
+    font-size: 18px; }
+  .love ul {
+    flex-wrap: wrap; } }

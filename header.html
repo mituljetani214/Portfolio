@@ -1,0 +1,46 @@
+<header>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <a class="navbar-brand" href="#"><img src="images/mj.png"></a>
+            <a href="javascript:;" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class=" navbar-collapse mobile">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="project.html">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<script>
+    $(".hamburger").click(function() {
+        $(".mobile").toggleClass("open");
+
+    });
+
+    if ($(window).width() < 1024) {
+        $('.navbar-nav .nav-link').click(function() {
+            $(".mobile").removeClass("open");
+        })
+    }
+    // $(".hamburger_close,.blackOverlap").click(function() {
+    //     $(".navbar").removeClass("open");
+    // });
+</script>
