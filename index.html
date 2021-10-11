@@ -1,133 +1,287 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Mitul Jetani</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
-<head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Mitul Jetani | UI/UX Designer - Layout Designer</title>
-    <!-- Stylesheets -->
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
-    <!-- <link href="css/jquery.fancybox.min.css" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css" rel="stylesheet"> -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="images/favi.png" type="image/x-icon">
-    <link rel="icon" href="images/favi.png" type="image/x-icon">
 
-    <!-- Responsive -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- Required stylesheets -->
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-</head>
+    
+  </head>
+  <body onload="init()">
+    <header class="wow bounceInDown">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html" class="link">
+            <img src="images/logo.svg" width="185" height="25" alt="Mitul Jetani">
+          </a>
+        </div>
+        <span class="menu-icon">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </span>
+        <div class="main-menu">         
+          <ul>
+            <li class="menu-item"><a class="link" href="#" data-menu-name="About">About</a></li>
+            <li class="menu-item"><a class="link" href="#" data-menu-name="Portfolio">Portfolio</a></li>
+            <li class="menu-item"><a class="link" href="#" data-menu-name="Resume">Resume</a></li>
+            <li>
+              <a href="#" class="link">   
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5952 7.23212C17.3654 6.10903 16.918 5.04179 16.2781 4.09065C15.962 3.6253 15.6027 3.19085 15.2049 2.79309C13.9934 1.57495 12.4492 0.741729 10.7659 0.39797C9.06219 0.0486194 7.29311 0.21308 5.683 0.870498C4.07289 1.52792 2.69428 2.64868 1.72199 4.09065C1.40563 4.56076 1.13606 5.0607 0.917111 5.58333C0.460964 6.66396 0.225952 7.82502 0.225952 8.99797C0.225952 10.1709 0.460964 11.332 0.917111 12.4126C1.13761 12.9354 1.40882 13.4354 1.72687 13.9053C2.52981 15.0966 3.61281 16.0728 4.88089 16.7481C6.14896 17.4233 7.56337 17.7772 9.00004 17.7785C11.3273 17.7777 13.559 16.8531 15.2049 15.2077C15.6026 14.8099 15.9619 14.3754 16.2781 13.9102C16.931 12.9407 17.3839 11.8507 17.6101 10.704C17.8362 9.55722 17.8312 8.37687 17.5952 7.23212ZM16.4927 8.9248C14.7752 8.57997 13.0154 8.49773 11.2732 8.6809L11.1122 8.29553C10.9561 7.92968 10.7903 7.56382 10.6244 7.20773C13.5805 5.99797 14.7854 4.2809 14.7952 4.24187C15.8806 5.56239 16.4798 7.21548 16.4927 8.9248ZM13.9513 3.3687C13.9513 3.39797 12.8635 5.02236 10.0488 6.08577C9.21698 4.56005 8.28145 3.09319 7.24882 1.69553C8.41924 1.41052 9.6412 1.41248 10.8107 1.70125C11.9802 1.99001 13.0626 2.55704 13.9659 3.35407L13.9513 3.3687ZM5.80492 2.20285C6.81475 3.6002 7.74312 5.05465 8.5854 6.55894C6.33131 7.1457 4.01217 7.44563 1.68296 7.45163C1.92084 6.32079 2.41656 5.26013 3.13152 4.35226C3.84647 3.4444 4.76136 2.71384 5.80492 2.21748V2.20285ZM1.50735 8.99797C1.50735 8.91992 1.50735 8.84187 1.50735 8.76382C4.10919 8.7732 6.69921 8.41353 9.20004 7.69553C9.41467 8.11504 9.61955 8.54431 9.80979 8.9687L9.51223 9.05651C5.47321 10.3638 3.42443 14.0028 3.42443 14.0028C2.18859 12.629 1.50561 10.8459 1.50735 8.99797ZM9.00004 16.4955C7.25647 16.4986 5.56686 15.8911 4.22443 14.7785L4.39516 14.9102C4.39516 14.9102 5.82931 11.7736 10.2732 10.2272H10.322C11.0357 12.0631 11.5731 13.9627 11.9269 15.9004C11.0014 16.2941 10.0058 16.4965 9.00004 16.4955ZM13.1854 15.2175C12.8516 13.3904 12.362 11.5952 11.722 9.85163C13.2833 9.61919 14.8766 9.73073 16.3903 10.1785C16.2298 11.1931 15.8625 12.164 15.3112 13.0308C14.7599 13.8976 14.0363 14.6419 13.1854 15.2175Z" fill="white"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link">
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.08778 16.2728H0.673148V5.30696H4.08778V16.2728ZM2.28778 3.93623H2.26339C2.00192 3.95573 1.73924 3.92097 1.49185 3.83413C1.24445 3.74729 1.01767 3.61026 0.825748 3.43162C0.633825 3.25298 0.4809 3.03659 0.376572 2.79605C0.272243 2.5555 0.218764 2.29599 0.21949 2.03379C0.21949 0.950867 1.04388 0.131355 2.31217 0.131355C2.57489 0.110514 2.83907 0.144202 3.08815 0.230306C3.33723 0.31641 3.56582 0.45307 3.75957 0.631709C3.95333 0.810349 4.10806 1.02711 4.21407 1.26839C4.32008 1.50967 4.37507 1.77025 4.37559 2.03379C4.37559 3.09721 3.57071 3.93623 2.28778 3.93623ZM17.7805 16.2728H13.878V10.5996C13.878 9.13623 13.2732 8.10208 11.9268 8.10208C11.5159 8.10205 11.1156 8.23171 10.7827 8.47259C10.4499 8.71346 10.2015 9.05326 10.0732 9.44355C9.99157 9.73361 9.96347 10.0361 9.99022 10.3362V16.2728H6.17559C6.17559 16.2728 6.22437 6.22403 6.17559 5.31184H10.0195V7.04843C10.2488 6.29721 11.4829 5.22404 13.4341 5.22404C15.8732 5.22404 17.7805 6.79965 17.7805 10.1948V16.2728Z" fill="white"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="link">
+                <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.27802 1.60896C8.61334 2.09563 8.78427 2.67678 8.76582 3.2675C8.7969 3.84166 8.62414 4.40834 8.27802 4.8675C8.04618 5.12779 7.76411 5.33852 7.44875 5.48701C7.9638 5.6632 8.4051 6.00663 8.70241 6.46262C8.99566 6.94009 9.14315 7.49277 9.1268 8.05286C9.13565 8.6652 8.96616 9.26689 8.63899 9.78457C8.42315 10.1447 8.13399 10.4555 7.79028 10.6967C7.44657 10.9379 7.05598 11.1041 6.64387 11.1846C6.13966 11.2857 5.6264 11.3347 5.11216 11.3309H0.219482V0.43335H5.46338C6.78696 0.452862 7.72517 0.844732 8.27802 1.60896ZM2.38534 2.31628V4.7114H5.02436C5.4238 4.72827 5.82024 4.63549 6.1707 4.44311C6.32627 4.33635 6.4495 4.18888 6.52693 4.01682C6.60435 3.84476 6.633 3.65473 6.60972 3.4675C6.63331 3.25992 6.58963 3.05026 6.48514 2.86936C6.38064 2.68847 6.22083 2.54589 6.02924 2.46262C5.61337 2.33794 5.18031 2.28031 4.74631 2.29189L2.38534 2.31628ZM2.38534 6.50652V9.41384H5.01948C5.39484 9.43141 5.76949 9.36647 6.11704 9.2236C6.3577 9.09463 6.55418 8.8965 6.68113 8.65478C6.80807 8.41305 6.85966 8.13883 6.82924 7.8675C6.84978 7.6252 6.79405 7.38255 6.66984 7.1735C6.54564 6.96445 6.35918 6.79946 6.13655 6.70164C5.79375 6.55779 5.42538 6.48479 5.05363 6.48701L2.38534 6.50652ZM15.6829 3.4236C16.2493 3.67923 16.7302 4.09241 17.0683 4.61384C17.406 5.11017 17.6247 5.67774 17.7073 6.27238C17.7727 6.80141 17.7972 7.3347 17.7805 7.8675H11.9268C11.9119 8.1976 11.981 8.52609 12.1278 8.82215C12.2745 9.11822 12.4941 9.37217 12.7658 9.56018C13.1144 9.76941 13.5156 9.87437 13.9219 9.86262C14.3416 9.88244 14.7547 9.7528 15.0878 9.49677C15.2725 9.33939 15.4221 9.14494 15.5268 8.92604H17.6683C17.5735 9.48443 17.3015 9.99752 16.8926 10.3895C16.5035 10.7896 16.033 11.1016 15.5129 11.3044C14.9929 11.5072 14.4354 11.5961 13.878 11.5651C12.851 11.5826 11.8508 11.2371 11.0536 10.5895C10.2341 9.93904 9.82598 8.8675 9.82924 7.37482C9.82924 5.98294 10.1967 4.91465 10.9317 4.16994C11.3091 3.80171 11.7578 3.51443 12.2501 3.3257C12.7425 3.13697 13.2682 3.05077 13.7951 3.07238C14.4422 3.05416 15.0857 3.17388 15.6829 3.4236ZM12.5463 5.23823C12.2307 5.58386 12.0341 6.0215 11.9853 6.48701H15.6C15.5972 6.24864 15.546 6.01333 15.4496 5.79532C15.3532 5.57731 15.2135 5.38115 15.039 5.21872C14.692 4.92576 14.249 4.77116 13.7951 4.78457C13.5661 4.76964 13.3366 4.80223 13.1208 4.88031C12.9051 4.95838 12.7078 5.08024 12.5414 5.23823H12.5463ZM16.0927 0.935789H11.439V2.29189H16.0878L16.0927 0.935789Z" fill="white"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
-<body>
-    <div class="wrapper">
-        <div id="header"></div>
-        <section class="main-profile py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="profile">
-                            <p>Hi, my name is Mitul Jetani. I am a UI/UX designer and architecture from India.</p>
-                            <img src="images/mitul.png" title="mitul jetani" alt="mitul image" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-md-6 d-flex align-self-end">
-                        <p class="right">You can also call me a product designer, experience designer, interaction, UI, UX or by any other market defined function-title. I'm also a multi-disciplinary maker with over 5 years of experiences in wide range of design disciplines,
-                            manager, advisor, entrepreneur, front-end developer, music enthusiast, travele and more.</p>
-                    </div>
-                </div>
-
+    <!-- Main Banner -->
+    <section class="main-banner">
+      <div class="banner-wrap">
+        <div class="container">
+          <div class="banner-title">
+            <h1>
+              <b class="wow zoomIn opacity-none">User Centric Design</b>
+              <span class="wow fadeInUp">Experiance Designer based in Montreal</span>
+            </h1>
+            <img src="images/profile.png" class="opacity-none" alt="Mitul Jetani">
+          </div>
+          <div class="banner-description">
+            <img src="images/banner-img.png" class="opacity-none" alt="Banner">
+            <div class="banner-content">
+              <p class="wow bounceInUp">
+                Over the last 4 years, I’ve worked on a diverse range of products across multiple disciplines from UX research, visual design, interaction design, and code.
+                <br><br>
+                My multidisciplinary experience alongside my passion for meeting challenges, and problem solving, has helped me approach digital products with a more strategic and holistic view.
+              </p>
+              <a href="#" class="wow bounceInUp">More about me
+                <svg width="20" height="8" viewBox="0 0 20 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 0V3H0V5H16V8L20 4L16 0Z" fill="#FF5B48"/>
+                </svg>
+              </a>
             </div>
-        </section>
-
-        <section class="m text-white mt-5 pt-5">
-            <div class="container">
-                <div class="row mb-5">
-                    <div class="col-md-6 d-flex justify-content-center">
-                        <h5>My Design</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <p>Over the last decade, I’ve collaborated with a Shopify Design mainly focus on Headless Platform to provide a smooth User Experience. I approach product design and leadership with a focus on people, establishing empathy for both
-                            the people who make and the people who use the products I help bring to life. My design practice combines design thinking, user research & experience strategy, all with a relentless focus on the user.</p>
-                    </div>
-                </div>
-                <div class="row py-5">
-                    <div class="col-md-6 d-flex justify-content-center">
-                        <h5>What i do</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="do d-flex flex-column flex-md-row">
-                            <ul>
-                                <li>Design Systems in Figma</li>
-                                <li>Responsive layout</li>
-                                <li>Aesthetic eCommerce UI/UX Design</li>
-                            </ul>
-                            <ul class="pl-md-5 pl-3">
-                                <li>Interviews & Survay</li>
-                                <li>UX Research Consultant</li>
-                                <li>Typography</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-5 pb-5">
-                    <div class="col-md-6 d-flex justify-content-center">
-                        <h5>Experience</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <tbody>
-                                    <tr>
-                                        <td>Senior UI/UX Designer @Aureatelabs, India.</td>
-                                        <td><span>current</span></td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>UI Designer @Daddy’s code, India.</td>
-                                        <td><span>2018-2020</span></td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>Graphic Designer @Success Soft Infotech, India</td>
-                                        <td><span>2017-2018</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Graphic Designer as Freelancer @Remote</td>
-                                        <td><span>2015</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="btns mt-5">
-                            <a href="#" class="btn btn-theme ">Hire me</a>
-                            <a href="#" class="btn btn-outline">My Work</a>
-                        </div>
-                    </div>
-                </div>
-
+          </div>
+        </div>
+      </div>
+      <div id="banner-hover" data-hero class="banner-hover" style="--y:50%; --x:50%; --maskSize1:13%;">
+        <div class="container">
+          <div class="banner-title">
+            <h1>
+              <b class="wow zoomIn">User Centric Design</b>
+              <span class="wow fadeInUp">Experiance Designer based in Montreal</span>
+            </h1>
+            <img src="images/profile.png" alt="Mitul Jetani">
+          </div>
+          <div class="banner-description">
+            <img src="images/banner-img.png" alt="Banner">
+            <div class="banner-content">
+              <p class="wow bounceInUp">
+                Over the last 4 years, I’ve worked on a diverse range of products across multiple disciplines from UX research, visual design, interaction design, and code.
+                <br><br>
+                My multidisciplinary experience alongside my passion for meeting challenges, and problem solving, has helped me approach digital products with a more strategic and holistic view.
+              </p>
+              <a href="#" class="wow bounceInUp link">More about me
+                <svg width="20" height="8" viewBox="0 0 20 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 0V3H0V5H16V8L20 4L16 0Z" fill="#FF5B48"/>
+                </svg>
+              </a>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Main Banner close-->
+
+    <section class="info-section">
+      <div class="container">
+        <div class="experience-content content-row">
+          <div class="count show-on-scroll">
+            <h2>1</h2>
+          </div>
+          <div class="second-title show-on-scroll">
+            My <br>Expertice
+          </div>
+          <div class="inner-menu show-on-scroll">
+            <ul>
+              <li><a href="javascript:void(0)" class="link">Product Design</a></li>
+              <li><a href="javascript:void(0)" class="link">Design System</a></li>
+              <li><a href="javascript:void(0)" class="link">iOS UI</a></li>
+            </ul>
+          </div>
+          <div class="inner-menu show-on-scroll">
+            <ul>
+              <li><a href="javascript:void(0)" class="link">Solid UX</a></li>
+              <li><a href="javascript:void(0)" class="link">Branding   </a></li>
+              <li><a href="javascript:void(0)" class="link">Pitch Perfect</a></li>
+            </ul>
+          </div>
+          <div class="inner-menu show-on-scroll">
+            <ul>
+              <li><a href="javascript:void(0)" class="link">Logo Design</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="experience-content content-row show-on-scroll">
+          <div class="count show-on-scroll" >
+            <h2>2</h2>
+          </div>
+          <div class="second-title show-on-scroll">
+            Tool Use for <br>design
+          </div>
+          <div class="inner-menu show-on-scroll">
+            <ul>
+              <li><a href="javascript:void(0)" class="link">Figma</a></li>
+              <li><a href="javascript:void(0)" class="link">Photoshop</a></li>
+              <li><a href="javascript:void(0)" class="link">Illustration</a></li>
+            </ul>
+          </div>
+          <div class="inner-menu show-on-scroll">
+            <ul>
+              <li><a href="javascript:void(0)" class="link">Framer</a></li>
+              <li><a href="javascript:void(0)" class="link">Invision</a></li>
+              <li><a href="javascript:void(0)" class="link">Fig Jar</a></li>
+            </ul>
+          </div>
+          <div class="inner-menu show-on-scroll">
+            <ul>
+              <li><a href="javascript:void(0)" class="link">After Effect</a></li>
+              <li><a href="javascript:void(0)" class="link">Spline</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="menu-animation-wrap">
+          <div class="menu-animation show-on-scroll">
+            <div class="menu-animation-left">
+              <ul>
+                <li>Freelancing</li>
+                <li>Lunch day</li>
+                <li>Bubble Tea</li>
+                <li>Pizza</li>
+                <li>League of Ledgend</li>
+                <li>Even spacing</li>
+                <li>Freelancing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-content content-row show-on-scroll">
+          <div class="count show-on-scroll">
+            <h2>3</h2>
+          </div>
+          <div class="second-title show-on-scroll">
+            Latest <br>Project
+          </div>
+          <div class="inner-menu show-on-scroll">
+            <ul>
+              <li>
+                <a href="#" class="link">All Projects 
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.8344 23.3333H7.00106C5.71239 23.3333 4.66772 22.2887 4.66772 21V8.16667C4.66772 6.87801 5.71239 5.83334 7.00106 5.83334H11.6677V8.16667H7.00106V21H19.8344V16.3333H22.1677V21C22.1677 22.2887 21.1231 23.3333 19.8344 23.3333ZM13.6511 15.9915L12.0061 14.3418L19.3479 7H15.1677V4.66667H23.3344V12.8333H21.0011V8.65084L13.6511 15.9915Z" fill="white"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="artical-section">
+      <div class="container">
+        <div class="artical show-on-scroll">
+          <a href="#" class="link"><img src="images/dubudoo.png"></a>
+          <span>Responsive UI Design</span>
+          <h3><a href="#" class="link">Pet food & Accessories</a></h3>
+        </div>
+        <div class="artical show-on-scroll">
+          <a href="#" class="link"><img src="images/fitnessbug.png"></a>
+          <span>Responsive UI Design</span>
+          <h3><a href="#" class="link">Health and fitness E-commerce shopify store.</a></h3>
+        </div>
+        <div class="artical show-on-scroll">
+          <a href="#" class="link"><img src="images/north.png"></a>
+          <span>iOS UI</span>
+          <h3><a href="#" class="link">A Design system for an insurance company.</a></h3>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-top show-on-scroll">
+        <div class="container">
+          <div class="logo-left">
+            <a href="index.html" class="link">
+              <img src="images/logo-icon.png" width="185" height="25" alt="Mitul Jetani">
+            </a>
+            <h3>Mitul Jetani</h3>
+            <span>UI/UX Designer</span>
+          </div>
+          <div class="footer-right">
+            <p>I’m always happy to make new friends, face new challenges, and have some fun. Feel free to say hi!</p>
+            <ul>
+              <li><a href="#" class="link">Resume</a></li>
+              <li><a href="#" class="link">Portfolio</a></li>
+              <li><a href="#" class="link">Contact us</a></li>
+              <li><a href="#" class="link">Behance</a></li>
+              <li><a href="#" class="link">Dribble</a></li>
+              <li><a href="#" class="link">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div> 
+      </div>
+      <div class="footer-bottom show-on-scroll">
+        <div class="container">
+          <p>Made with <a href="https://in.linkedin.com/in/bhavesh-limbani-034254a8" target="_blank" class="link">Bhavesh Limbani</a> in <a href="#" class="link">Surat.</a><span>© mitul jetani, 2021</span></p>
+        </div> 
+      </div>
+    </footer>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Required JS fils -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+     <!-- <script src="https://min30327.github.io/luxy.js/dist/js/luxy.js"></script> -->
 
 
-
-
-
-
-        <div id="footer"></div>
-    </div>
-    </div>
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom.js"></script>
 
     <script>
+      // css animation
+      new WOW().init();
     </script>
-
-</body>
-
+  </body>
 </html>
