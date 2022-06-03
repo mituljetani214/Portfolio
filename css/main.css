@@ -189,6 +189,9 @@ html.no-scroll body {
 .opacity-none {
 	opacity: 0;
 }
+.display-none {
+    display: none;
+}
 /*Default-CSS close*/
 
 header {
@@ -427,7 +430,6 @@ header .container {
 .cursor.hovered {
   opacity: 1;
 }
-
 .cursor-follower {
   position: fixed;
   border: 1px solid #fff;
@@ -581,8 +583,6 @@ header .container {
   transform: translateY(0em);
 }
 
-
-
 /* artical sectio*/
 .artical-section {
     padding-bottom: 90px;
@@ -683,3 +683,310 @@ header .container {
     font-family: 'Inter', sans-serif;
     font-family: 'DM Serif Display', serif;
 */
+
+
+/* All Project Styles */
+.all-projects {
+    background: rgba(6, 2, 1, .8);
+    backdrop-filter: blur(148px);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.all-projects::before,
+.all-projects::after {
+    content: '';
+    position: absolute;
+    transform: translateX(50%);
+    filter: blur(240px);
+    border-radius: 100%;
+    z-index: -1;
+    opacity: .5;
+}
+.all-projects::after {
+    width: 762px;
+    height: 762px;
+    left: -50%;
+    bottom: 20%;
+    background: #6426FF;
+}
+.all-projects::before {
+    width: 600px;
+    height: 600px;
+    right: 0;
+    top: 80px;
+    background: #FC3A00;
+}
+/* Portfolio Styles */
+.my-work {
+    position: relative;
+    /* height: 800px; */
+    padding-top: 315px;
+    padding-bottom: 75px;
+}
+.my-work .container {
+    display: flex;
+    justify-content: space-between;
+}
+.my-work-title {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 394px;
+    text-align: center;
+    color: #eee;
+    white-space: nowrap;
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -80px);
+}
+.my-work-description {
+    margin-left: auto;
+}
+.my-work-description p {
+    max-width: 500px;
+    margin: 40px 0 0 auto;
+    font-size: 18.66px;
+    line-height: 1.5;
+    color: #fff;
+}
+.keep-scrolling {
+    margin-left: 66px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+.keep-scrolling p {
+    width: 44px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.7;
+    text-decoration-line: underline;
+    margin-bottom: 12px;
+}
+.keep-scrolling svg {
+    width: 8px;
+}
+/* Portfolio Styles End */
+
+/* Project Image Styles */
+.my-works {
+    padding-bottom: 120px;
+}
+.grid-image-item {
+    display: block;
+}
+.grid-image-item .case-image {
+    width: 100%;
+}
+/* Project Image Styles End */
+
+/* Contact Styles */
+.cta-section {
+    padding-bottom: 120px;
+}
+.cta-post-list {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    justify-items: center;
+    grid-column-gap: 4rem;
+    border-top: 1px solid rgba(250, 250, 250, 0.24);
+    border-bottom: 1px solid rgba(250, 250, 250, 0.24);
+}
+.cta-posts {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 80px 0 100px 0;
+}
+.post-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8px;
+}
+.post-title {
+    font-weight: 400;
+    font-size: 68.95px;
+    text-align: center;
+    color: #eee;
+    margin-bottom: 60px;
+}
+.cta-arrow-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    transform: translate3d(-80px, 0px, 0px);
+    transform-style: preserve-3d;
+    transition: ease 0.25s;
+}
+.arrow-first {
+    margin: 2.3rem 1.6rem;
+}
+.arrow-second {
+    margin-right: 2.1rem;
+    margin-left: 2.1rem;
+}
+.cta-posts:hover .cta-arrow-wrap {
+    transform: translate3d(0, 0px, 0px);
+}
+.cta-arrow {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.cta-divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color:rgba(250, 250, 250, 0.24);
+}
+/* Contact Styles End */
+
+/* Project Details Styles */
+.project-detail {
+    background: rgba(6, 2, 1, 0.8);
+    backdrop-filter: blur(148px);
+    position: relative;
+}
+.project-detail::before {
+    content: '';
+    position: absolute;
+    width: 762px;
+    height: 762px;
+    left: 0;
+    top: 140px;
+    transform: translateX(-50%);
+    background: #FEE403;
+    filter: blur(240px);
+    border-radius: 381px;
+    opacity: .5;
+}
+.project-title {
+    font-size: 68.95px;
+    color: #EEEEEE;
+    max-width: 570px;
+    padding: 90px 0;
+    margin: 0;
+}
+.project-heading {
+    font-weight: 500;
+    font-size: 14px;
+    color: #808080;
+    margin-bottom: 16px;
+}
+.project-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+}
+.cases-info-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+}
+.cases-info-wrapper .project-deliverables {
+    min-width: 310px;
+}
+
+/* Work Overview Styles */
+.work-overview-content {
+    display: flex;
+    padding-bottom: 80px;
+}
+.overview-text {
+    width: 50%;
+    margin-top: 80px;
+}
+.overview-text p {
+    font-size: 18.66px;
+}
+.overview-img img {
+    width: 100%;
+    max-width: 386px;
+    margin: auto;
+}
+.overview-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-top: -115px;
+}
+.my-work-image {
+    padding-bottom: 120px;
+}
+.hr {
+    border: 0.4px solid #fafafacc;
+}
+.core-value-index,
+.strategy-index {
+    font-family: 'DM Serif Display';
+    font-size: 68px;
+    line-height: 1;
+    color: #EEEEEE;
+    width: 16%;
+}
+.core-value-label,
+.strategy-label {
+    font-weight: 500;
+    font-size: 14px;
+    color: #FF5B48;
+    width: 16%;
+}
+.core-values {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 24px;
+    color: #808080;
+    display: flex;
+    flex-wrap: wrap;
+    width: 68%;
+}
+.core-value-wrap {
+    display: flex;
+    padding: 80px 0;
+}
+.core-values li {
+    width: 33.33334%;
+    margin-bottom: 2rem;
+}
+.project-strategy {
+    padding-bottom: 120px;
+}
+.strategy-wrap {
+    padding: 120px 0;
+    display: flex;
+}
+.strategy-text {
+    font-size: 24px;
+    color: #fff;
+    width: 68%;
+}
+.strategy-images {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.strategy-left,
+.strategy-right{
+    width: 50%;
+}
+.strategy-right picture:not(:last-child) img {
+    margin-bottom: 2.5rem;
+}

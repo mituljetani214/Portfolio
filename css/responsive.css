@@ -46,6 +46,21 @@
 	    font-size: 16px;
 	    margin-right: 28px;
 	}
+
+	.project-title {
+		font-size: 48px;
+		padding: 60px 0;
+	}
+	.overview-text {
+		width: 55%;
+		margin-top: 45px;
+	}
+	.overview-img img {
+		max-width: 260px;
+	}
+	.overview-img {
+		width: 45%;
+	}
 }
 
 /* mobile view */
@@ -279,5 +294,125 @@
 	.footer-bottom p span {
 	    margin-left: 0;
 	    display: block;
+	}
+
+	.my-work {
+		padding-top: 100px;
+		padding-bottom: 60px;
+	}
+	.my-work-title {
+		font-size: 94px;
+		transform: translate(-50%, 0);
+	}
+	.keep-scrolling {
+		margin-left: 0;
+		margin-right: 16px;
+	}
+	.my-work-description p {
+		margin: 20px 0 0 auto;
+	}
+
+	.project-title {
+		font-size: 38px;
+		padding: 80px 0 40px;
+	}
+	.project-heading {
+		font-size: 12px;
+		margin-bottom: 8px;
+	}
+	.project-text {
+		font-size: 18px;
+	}
+	.cases-info-wrapper {
+		padding-bottom: 40px;
+	}
+	.cases-info-wrapper .project-deliverables {
+		width: 50%;
+		min-width: auto;
+	}
+	.cases-info-wrapper .project-deliverables:nth-child(2) {
+		order: 2;
+	}
+	.work-overview-content {
+		padding-bottom: 50px;
+	}
+	.overview-text {
+		margin-top: 40px;
+		width: 100%;
+	}
+	.overview-img {
+		display: none;
+	}
+	.core-value-wrap {
+		padding: 10px 0 16px;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.core-value-index, .strategy-index {
+		font-size: 48px;
+	}
+	.core-values {
+		width: 100%;
+		padding-top: 32px;
+		font-size: 18px;
+	}
+	.core-values li {
+		width: 50%;
+		margin-bottom: 1.5rem;
+	}
+	.project-strategy,
+	.my-work-image,
+	.cta-section {
+		padding-bottom: 60px;
+	}
+	.strategy-wrap {
+		padding: 60px 0;
+	}
+	.strategy-wrap {
+		flex-wrap: wrap;
+	}
+	.strategy-text {
+		width: 100%;
+		margin-top: 32px;
+	}
+	.strategy-images {
+		flex-wrap: wrap;
+		gap: 32px;
+	}
+	.strategy-left, .strategy-right {
+		width: 100%;
+	}
+	.strategy-right picture:not(:last-child) img {
+		margin-bottom: 2rem;
+	}
+	.cta-post-list {
+		flex-wrap: wrap;
+		border-top: 0;
+		border-bottom: 0;
+		border-left: 1px solid #fafafa3d;
+		border-right: 1px solid #fafafa3d;
+	}
+	.post-subtitle {
+		font-weight: 400;
+	}
+	.cta-posts {
+		padding: 30px 0;
+		position: relative;
+	}
+	.post-title {
+		font-weight: 400;
+		font-size: 38px;
+		margin-bottom: 40px;
+	}
+	.cta-divider {
+		display: none;
+	}
+	.cta-post-list .cta-posts:first-child::after {
+		content: '';
+		height: 1px;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		border-bottom: 1px solid #fafafa3d;
 	}
 }
