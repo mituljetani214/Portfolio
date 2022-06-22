@@ -974,9 +974,10 @@ header .container {
     display: flex;
 }
 .strategy-text {
-    font-size: 24px;
+    font-size: 18.66px;
+    line-height: 1.5;
     color: #fff;
-    width: 68%;
+    width: 50%;
 }
 .strategy-images {
     display: flex;
