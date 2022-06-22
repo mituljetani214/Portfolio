@@ -230,11 +230,8 @@ function SmoothScroll(target, speed, smooth) {
   }()
 }
 
-
 // mobile menu
 $('.menu-icon').on('click', function(e) {
-    $('html').toggleClass("menu-open"); //you can list several class names 
-    e.preventDefault();
-  });
-
-
+  $('html').toggleClass("menu-open"); //you can list several class names 
+  e.preventDefault();
+});
